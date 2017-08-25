@@ -20,6 +20,10 @@ func WriteConfigs(settings types.AppSettings) {
 	writeHomeControllerPhp(srcDirectory, settings.Namespace, settings.Name)
 }
 
+func SampleForTesting(phrase string) string {
+	return fmt.Sprintf("say %s", phrase)
+}
+
 func writeHomeControllerPhp(directory string, namespace string, name string) {
 	stringSlug :=`<?php
 
